@@ -20,7 +20,7 @@ initPassport();
 
 // middlewares
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://techno-hacks-task-4-user-authentica.vercel.app",
   credentials: true
 }));
 app.use(express.json());

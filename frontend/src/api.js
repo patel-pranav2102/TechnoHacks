@@ -1,4 +1,4 @@
-export const API = "http://localhost:5001/api";
+export const API = "https://backend-4-9bf0.onrender.com/api";
 
 const defaultOpts = {
   credentials: "include",
