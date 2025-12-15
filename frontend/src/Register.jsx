@@ -8,6 +8,7 @@ export default function Register({ onRegister }){
   const submit = async (e) => {
     e.preventDefault();
     if (form.username.length < 5) { setMsg("Username must be at least 5 characters long"); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) { setMsg("Please enter a valid email address"); return; }
     if (form.password.length < 8) { setMsg("Password must be at least 8 characters long"); return; }
     if (!/(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>])/.test(form.password)) { setMsg("Password must contain at least one number and one symbol"); return; }
     const res = await register(form);
